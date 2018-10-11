@@ -108,6 +108,14 @@ input#submit-button {
 	color: white;
 	text-decoration: none;
 }
+/*dashboard shopping cart*/
+.cart {
+    text-align: left;
+    padding: 23px;
+}
+ul.cart-items {
+    list-style: none;
+}
 @media(min-width: 768px) {
     .row {
         display: flex;
