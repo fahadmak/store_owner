@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Proxima;
+    src: url("../fonts/proximanova-regular[1].woff") format('woff'),
+         url("../fonts/proximanova-light[1].woff") format('woff'),
+         url("../fonts/proximanova-bold[1].woff") format('woff');
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +13,7 @@ html, body {
     height: 100%;
     background: #FFF;
     text-align: center;
-    font: 1.2em/1 "Raleway";
+    font: 1.2em/1 "Proxima";
 }
 .wrapper {
     height: 100%;
