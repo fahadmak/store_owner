@@ -17,6 +17,7 @@ html, body {
     margin: auto;
     overflow: hidden;
 }
+/*login section*/
 img.locate {
     top: 149px;
     position: relative;
@@ -68,4 +69,54 @@ input#submit-button {
     border: 1px solid white;
     border-radius: 15px;
 }
-
+/*End of Login section*/
+/*side navigation*/
+.navigation {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 270px;
+	background-color: cornflowerblue;
+	z-index: 1;
+}
+.center {
+	width: 80%;
+	height: 100%;
+	background-color: #eaeceb33;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	padding: 20px 30px 0 30px;
+	overflow: hidden;
+}
+.menu {
+	position: relative;
+	top: 97px;
+}
+.menu_active {
+	background-image: linear-gradient(to right, rgba(255,0,0,0),rgb(45, 103, 236));
+}
+.menu-items {
+	list-style: none;
+	padding: 25px 2px 25px 28px;
+	text-align: left;
+}
+.item {
+	color: white;
+	text-decoration: none;
+}
+@media(min-width: 768px) {
+    .row {
+        display: flex;
+    }
+    .col-2 {flex: 2}
+    .col-3 {flex: 3}
+    .col-4 {flex: 4}
+    .col-8 {flex: 8}
+    .col-9 {flex: 9}
+    .col-10 {flex: 10}
+    .col-12 {flex: 12}
+}
