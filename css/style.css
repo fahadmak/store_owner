@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    background: #FFF;
+    text-align: center;
+    font: 1.2em/1 "Raleway";
+}
+.wrapper {
+    height: 100%;
+}
+.row {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+img.locate {
+    top: 149px;
+    position: relative;
+}
+.login {
+    margin: auto;
+    width: 334px;
+    height: 287px;
+    margin-top: 100px;
+    padding-top: 77px;
+    background: aliceblue;
+}
+
+.box-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-section {
+    justify-content: center;
+    margin: 0 7px;
+}
+input.first {
+    width: 252px;
+    height: 37px;
+    padding: 12px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #cacaff66;
+}
+.first:active {
+    border: 1px solid #449aed99;
+}
+input#submit-button {
+    width: 206px;
+    height: 40px;
+    color: white;
+    background-color: #00aeef;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.sb {
+    width: 112px;
+    height: 38px;
+    color: white;
+    background-color: #00aeef;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
