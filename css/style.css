@@ -122,6 +122,55 @@ input#submit-button {
 ul.cart-items {
     list-style: none;
 }
+.product-table {
+	text-align: center;
+	width: 95%;
+}
+.product-columns {
+	display: flex;
+	list-style: none;
+	height: 57px;
+	padding: 17px;
+	background-color: #f0f0f0;
+}
+ul.product-columns.product-row {
+	background-color: #fffefe;
+	font-size: smaller;
+	border-bottom: 1px solid #c9c9cc99;
+}
+.column {
+	text-align: left;
+	padding: 0px 12px;
+}
+.column1 {
+    width: 454px;
+}
+.column2 {
+    width: 222px;
+}
+.btn {
+	height: 35px;
+	width: 120px;
+	border-radius: 6px;
+	border: none;
+	background-color: #6495ed;
+	font-weight: bold;
+	color: white;
+	position: relative;
+	bottom: 3px;
+	left: 20px;
+}
+#qty {
+	width: 57px;
+	height: 31px;
+	padding: 3px;
+	font-size: smaller;
+	text-align: center;
+	border-radius: 8px;
+	border: 1px solid #f0f0f0;
+    margin-right: -6px
+}
+/*media queries*/
 @media(min-width: 768px) {
     .row {
         display: flex;
