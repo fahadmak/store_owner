@@ -140,7 +140,7 @@ ul.product-columns.product-row {
 }
 .column {
 	text-align: left;
-	padding: 0px 12px;
+	padding: 0 12px;
 }
 .column1 {
     width: 454px;
@@ -169,6 +169,26 @@ ul.product-columns.product-row {
 	border-radius: 8px;
 	border: 1px solid #f0f0f0;
     margin-right: -6px
+}
+/*sales record*/
+li.column.columntwo {
+    width: 134px;
+}
+li.column.columnone {
+    width: 351px;
+}
+li.column.columnthree {
+    width: 166px;
+}
+li.column.columnfour {
+    width: 125px;
+}
+li.cr {
+    text-align: left;
+    padding: 16px;
+}
+li.pitem {
+    padding: 9px 0;
 }
 /*media queries*/
 @media(min-width: 768px) {
