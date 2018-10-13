@@ -59,13 +59,20 @@ input.first {
 .first:active {
     border: 1px solid #449aed99;
 }
-input#submit-button {
+input.submit-button {
     width: 206px;
     height: 40px;
     color: white;
     background-color: #00aeef;
     border: 1px solid white;
     border-radius: 15px;
+}
+.login-btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+input.sb.size {
+    width: 138px;
 }
 #search{
     text-align: left;
