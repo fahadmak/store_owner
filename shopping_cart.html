@@ -8,38 +8,39 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="row">
-            <div class="col-4">
+        <div class="row" id="niv">
+            <div class="col-12">
 
                 <!--Side Navigation-->
 
-                <div class="navigation">
-                    <div class="menu">
-                        <ul>
-                            <li class="menu-items menu_active"><a class="item" href="#">POS</a></li>
-                            <li class="menu-items"><a class="item" href="#">Sales</a></li>
-                            <li class="menu-items"><a class="item" href="#">Inventory</a></li>
-                            <li class="menu-items"><a class="item" href="#">Fahad</a></li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!--End of Side Navigation-->
+                <nav id="nav">
+                    <ul class="navbar">
+                        <li class="nav-item"><a href="#" class="nav-links active">POS</a></li>
+                        <li class="nav-item"><a href="sales.html" class="nav-links">Sales</a></li>
+                        <li class="nav-item"><a href="inventory.html" class="nav-links">Inventory</a></li>
+                    </ul>
+                </nav>
+
+
+                <!--Side Navigation-->
 
             </div>
-            <div class="col-8">
+        </div>
+        <div class="row">
+            <div class="col-12">
                 <div class="center">
 
                     <!--Shopping Cart-->
 
                     <div class="cart">
                         <h3 style="padding-bottom: 13px;">Shopping Cart</h3>
-                        <ul class="cart-items" id="shop-cart">
-                            <li id="empty">There currently no items</li>
-                        </ul>
-                        <p>Total        <span id="total">0 </span></p>
+                        <div class="cart-items" id="shop-cart">
+                            <div id="empty">There currently no items</div>
+                        </div>
+                        <p style="padding: 11px;">Total<span id="total" style="padding: 0 0 0 18px;">0</span></p>
                         <div style="padding: 12px 0;">
-                                <button class="btn" onclick="createRecord()">Sale Record</button>
+                                <button id="create" class="btn" onclick="createRecord()" style="left: 9px;">Create Record</button>
                         </div>
                     </div>
 
@@ -56,11 +57,19 @@
                                 <li class="column column3">Quantity</li>
                             </ul>
                             <ul class="product-columns product-row">
-                                <li class="column column1" id="name">Royco-Curry-Powder-(50gm)</li>
-                                <li class="column column2" id="price">200</li>
+                                <li class="column column1" id="name1">Royco-Curry-Powder-(50gm)</li>
+                                <li class="column column2" id="price1">200</li>
                                 <li style="position: relative;bottom: 5px;display: flex;" class="column column3">
-                                    <input placeholder="QTY" type="text" id="qty">
-                                    <button class="btn" onclick="addItem()">Add to Cart</button>
+                                    <input class="qty" placeholder="QTY" type="text" id="qty1">
+                                    <button class="btn" onclick="addItem('name1', 'price1', 'qty1')">Add to Cart</button>
+                                </li>
+                            </ul>
+                            <ul class="product-columns product-row">
+                                <li class="column column1" id="name2">Fish</li>
+                                <li class="column column2" id="price2">20000</li>
+                                <li style="position: relative;bottom: 5px;display: flex;" class="column column3">
+                                    <input class="qty" placeholder="QTY" type="text" id="qty2">
+                                    <button class="btn" onclick="addItem('name2', 'price2', 'qty2')">Add to Cart</button>
                                 </li>
                             </ul>
                         </div>
@@ -79,8 +88,15 @@
                                 <li class="column columnthree">Quantity</li>
                                 <li class="column columnfour">Total</li>
                             </ul>
-                            <ul class="cart-items" id="record"></ul>
+                            <div class="cart-items" id="record"></div>
+
                         </div>
+                    </div>
+                    <div id="gen">
+                        <p style="padding-top: 5px;text-align: right;">
+                            Total<span id="final-total" style="padding: 0 0 0 18px;">0</span>
+                        </p>
+                        <button class="btn" onclick="generate()">Generate Report</button>
                     </div>
 
                     <!--End of Sales record-->
