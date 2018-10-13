@@ -67,6 +67,19 @@ input#submit-button {
     border: 1px solid white;
     border-radius: 15px;
 }
+#search{
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    margin-right: -6px;
+    width: 303px;
+    padding: 0 16px;
+}
+.srch {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+}
 .sb {
     width: 112px;
     height: 38px;
