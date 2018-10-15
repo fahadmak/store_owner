@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Sales | The Shopping Cart</title>
     <link rel="stylesheet" href=css/style.css>
+    <link rel="stylesheet" href=css/fontawesome.css>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -13,11 +14,14 @@
 
                 <!--Side Navigation-->
 
-                <nav id="nav">
-                    <ul class="navbar">
-                        <li class="nav-item"><a href="shopping_cart.html" class="nav-links active">POS</a></li>
-                        <li class="nav-item"><a href="#" class="nav-links">Sales</a></li>
-                        <li class="nav-item"><a href="inventory.html" class="nav-links">Inventory</a></li>
+                <nav class="bar">
+                    <span class="nav-toggle" id="js-toggle">
+                        <img class="mobile" src="images/bars.svg">
+                    </span>
+                    <a href="shopping_cart.html" class="logo font">SM</a>
+                    <ul class="main-nav" id="nav-menu">
+                        <li ><a class="links" href="shopping_cart.html" >POS</a></li>
+                        <li><a class="links" href="#">Sales</a></li>
                     </ul>
                 </nav>
 
@@ -86,5 +90,6 @@
             </div>
         </div>
     </div>
+    <script src="js/mobile.js"></script>
 </body>
 </html>
