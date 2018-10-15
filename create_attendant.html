@@ -14,11 +14,15 @@
                 <!--Side Navigation-->
 
 
-                <nav id="nav">
-                    <ul class="navbar">
-                        <li class="nav-item"><a href="shopping_cart.html" class="nav-links active">POS</a></li>
-                        <li class="nav-item"><a href="sales.html" class="nav-links">Sales</a></li>
-                        <li class="nav-item"><a href="#" class="nav-links">Inventory</a></li>
+                <nav class="bar">
+                    <span class="nav-toggle" id="js-toggle">
+                        <img class="mobile" src="images/bars.svg">
+                    </span>
+                    <a href="shopping_cart.html" class="logo font">SM</a>
+                    <ul class="main-nav" id="nav-menu">
+                        <li ><a class="links" href="#" >Create Staff</a></li>
+                        <li><a class="links" href="view_all_records.html">Records</a></li>
+                        <li><a class="links" href="view_all_records.html">Products</a></li>
                     </ul>
                 </nav>
 
@@ -94,6 +98,7 @@
             </div>
         </div>
     </div>
+    <script src="js/mobile.js"></script>
     <script>
         var fname = document.getElementById('uname');
         var wel = document.getElementById('wel');
@@ -104,7 +109,7 @@
             wel.style.display = 'none';
             form.style.display = 'none';
             msg.innerHTML = fname.value.toUpperCase() + '\xa0\xa0has been created\xa0\xa0' +
-                '<a href="create_attendant.html">Go back</a>' ;
+                '<a href="view_all_records.html">Go to View Records</a>' ;
             msg.style.display = 'block';
         };
     </script>
