@@ -19,26 +19,30 @@ function addItem(id1, id2, id3) {
     grand += total;
     var grand1 = grand.toString();
     overall.innerText = grand1;
+    var idn = document.createElement('li');
+    idn.id = 'id' + idnum.toString();
+    idn.innerHTML = idnum.toString()
+    idn.setAttribute('class', 'column columnone');
     var named = document.createElement('li');
     named.id = name + idnum.toString();
-    named.setAttribute('class', 'column columnone');
+    named.setAttribute('class', 'column columntwo');
     named.innerHTML = name;
     var priced = document.createElement('li');
     priced.id = price + idnum.toString();
-    priced.setAttribute('class', 'column columntwo');
+    priced.setAttribute('class', 'column columnthree');
     priced.innerHTML = price;
     var qtyed = document.createElement('li');
     qtyed.id = qty.value + idnum.toString();
-    qtyed.setAttribute('class', 'column columnthree');
+    qtyed.setAttribute('class', 'column columnfour');
     qtyed.innerHTML = qty.value;
     var totaled = document.createElement('li');
     totaled.id = total + idnum.toString();
     idnum ++;
-    totaled.setAttribute('class', 'column columnfour');
+    totaled.setAttribute('class', 'column columnfive');
     totaled.innerHTML = total_str;
     var ul = document.createElement('ul');
     ul.setAttribute('class', 'bought');
-    ul.innerHTML = named.outerHTML + priced.outerHTML + qtyed.outerHTML + totaled.outerHTML;
+    ul.innerHTML = idn.outerHTML + named.outerHTML + priced.outerHTML + qtyed.outerHTML + totaled.outerHTML;
     if (empty !== null) {
         div.removeChild(empty);
     }
