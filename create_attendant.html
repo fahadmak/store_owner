@@ -28,18 +28,23 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <h2 class="welcome">Create Sales Attendant</h2>
-                <form class="sign" action="#" onsubmit="required()">
+                <p id="success"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="welcome" id="wel">Create Sales Attendant</h2>
+                <form class="sign" id="sp" action="#" onsubmit="required()">
                     <div class="box-section">
                         <div class="form-section">
                             <label class="holder">First Name</label>
                             <br>
-                            <input type="text" class="first" placeholder="First Name" required>
+                            <input type="text" id="fname" class="first" placeholder="First Name" required>
                         </div>
                         <div class="form-section last">
                             <label class="holder">Last Name</label>
                             <br>
-                            <input type="text" class="first" placeholder="Last Name" required>
+                            <input type="text" id="lname" class="first" placeholder="Last Name" required>
                         </div>
                     </div>
                     <br>
@@ -61,7 +66,7 @@
                         <div class="form-section">
                             <label class="holder">User Name</label>
                             <br>
-                            <input type="text" class="first" placeholder="User Name" required>
+                            <input type="text" id='uname' class="first" placeholder="User Name" required>
                         </div>
                         <div class="form-section last">
                             <label class="holder">Email</label>
@@ -89,5 +94,19 @@
             </div>
         </div>
     </div>
+    <script>
+        var fname = document.getElementById('uname');
+        var wel = document.getElementById('wel');
+        var form = document.getElementById('sp');
+        var msg = document.getElementById('success');
+        var btn = document.getElementById('submit-button');
+        btn.onclick = function () {
+            wel.style.display = 'none';
+            form.style.display = 'none';
+            msg.innerHTML = fname.value.toUpperCase() + '\xa0\xa0has been created\xa0\xa0' +
+                '<a href="create_attendant.html">Go back</a>' ;
+            msg.style.display = 'block';
+        };
+    </script>
 </body>
 </html>
