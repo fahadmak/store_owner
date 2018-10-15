@@ -36,10 +36,10 @@ img.locate {
 .login {
     margin: auto;
     width: 334px;
-    height: 287px;
+    height: 304px;
     margin-top: 100px;
     padding-top: 77px;
-    background: aliceblue;
+    background-image: linear-gradient(230deg, #3abcca6e, #2196f3bf);
 }
 
 .box-section {
@@ -267,6 +267,25 @@ button.btn.st.mod {
 button#create {
     display: none;
 }
+span#close {
+    position: relative;
+    left: 40%;
+    width: 35%;
+    font-size: 167%;
+    color: white;
+    border: 1px solid;
+    cursor: pointer;
+}
+.cr2 {
+    padding: 9px;
+}
+.form-xtics {
+    background-color: #00bcd4d4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #03A9F4;
+    width: 80%;
+}
 .qty {
 	width: 57px;
 	height: 31px;
@@ -323,6 +342,12 @@ li.pitem {
     background-color: rgba(0, 188, 212, 0.14);
 }
 span#exit {
+    position: relative;
+    left: 40%;
+    width: 35%;
+    font-size: 167%;
+    color: white;
+    border: 1px solid;
     cursor: pointer;
 }
 .pos{
