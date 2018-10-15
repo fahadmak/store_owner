@@ -22,9 +22,32 @@
                     </ul>
                 </nav>
 
-
                 <!--Side Navigation-->
 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="modifier" class="content">
+
+                  <!-- Modify Box -->
+                  <div class="form-xtics">
+                      <span id="exit">&times;</span>
+                    <span style="display: none" id="qb"></span>
+                    <div class="cr2">
+                        <input type="text" id="pname" placeholder="Name of Product" class="first">
+                    </div>
+                    <div class="cr2">
+                        <input type="text" id="pprice" placeholder="Price of Product" class="first" required>
+                    </div>
+                    <div class="cr2">
+                        <input type="text" id="pquantity" placeholder="Quantity" class="first" required>
+                    </div>
+                    <div><button class="btn" onclick="edit()">Modify</button></div>
+                  </div>
+
+                </div>
             </div>
         </div>
         <div class="row">
@@ -32,50 +55,66 @@
 
                 <!--Table with all Products-->
 
-                <div class="available" style="padding-top: 17px;">
+                <div class="available" id= 'display' style="padding-top: 17px;">
                     <div class="srch">
                         <h3 style="padding-bottom: 13px;">Available Products</h3>
+                        <button id ="add-btn" class="btn st mod">Add Product</button>
                         <input type="text" id="search" onkeyup="searching()" placeholder="Enter Product Name">
                     </div>
                     <ul class="product-columns">
-                            <li class="column column1">Product Name</li>
-                            <li class="column column2">Price</li>
-                            <li class="column column3">Quantity</li>
+                        <li class="column columnone">Id No.</li>
+                        <li class="column columntwo">Product Name</li>
+                        <li class="column columnthree">Price</li>
+                        <li class="column columnfour">Quantity</li>
+                        <li class="column columnfive"></li>
                     </ul>
                     <div class="product-table" id="table">
                         <ul class="product-columns product-row" id="item1">
-                            <li class="column column1" id="name1">Royco (50gm)</li>
-                            <li class="column column2" id="price1">200</li>
-                            <li class="column column3">
-                                600 units
+                            <li class="column columnone" id="id1">1</li>
+                            <li class="column columntwo" id="name1">Fish</li>
+                            <li class="column columnthree" id="price1">20000</li>
+                            <li class="column columnfour" id="qty1">
+                                500 units
+                            </li>
+                            <li class="column columnfive pos">
+                                <button id ="pdt1" class="btn st mod">Modify</button>
+                                <button class="btn st del">Delete</button>
                             </li>
                         </ul>
                         <ul class="product-columns product-row" id="item2">
-                            <li class="column column1" id="name2">Fish</li>
-                            <li class="column column2" id="price2">20000</li>
-                            <li class="column column3">
+                            <li class="column columnone" id="id2">2</li>
+                            <li class="column columntwo" id="name2">Beans</li>
+                            <li class="column columnthree" id="price2">20000</li>
+                            <li class="column columnfour" id="qty2">
                                 500 units
+                            </li>
+                            <li class="column columnfive pos">
+                                <button id ="pdt2" class="btn st mod">Modify</button>
+                                <button class="btn st del">Delete</button>
                             </li>
                         </ul>
                         <ul class="product-columns product-row" id="item3">
-                            <li class="column column1" id="name3">Fish Big</li>
-                            <li class="column column2" id="price3">50000</li>
-                            <li class="column column3">
+                            <li class="column columnone" id="id3">3</li>
+                            <li class="column columntwo" id="name3">Minced</li>
+                            <li class="column columnthree" id="price3">20000</li>
+                            <li class="column columnfour" id="qty3">
                                 500 units
+                            </li>
+                            <li class="column columnfive pos">
+                                <button id ="pdt3" class="btn st mod">Modify</button>
+                                <button class="btn st del">Delete</button>
                             </li>
                         </ul>
                         <ul class="product-columns product-row" id="item4">
-                            <li class="column column1" id="name4">Maize</li>
-                            <li class="column column2" id="price4">500</li>
-                            <li class="column column3">
+                            <li class="column columnone" id="id4">4</li>
+                            <li class="column columntwo" id="name4">Fish</li>
+                            <li class="column columnthree" id="price4">20000</li>
+                            <li class="column columnfour" id="qty4">
                                 500 units
                             </li>
-                        </ul>
-                        <ul class="product-columns product-row" id="item5">
-                            <li class="column column1" id="name5">Fillet</li>
-                            <li class="column column2" id="price5">5200</li>
-                            <li class="column column3">
-                                500 units
+                            <li class="column columnfive pos">
+                                <button class="btn st mod">Modify</button>
+                                <button class="btn st del">Delete</button>
                             </li>
                         </ul>
                     </div>
@@ -87,5 +126,38 @@
         </div>
     </div>
     <script src="js/search.js"></script>
+    <script>
+        var modifier = document.getElementById('modifier');
+        var div = document.getElementsByClassName('mod');
+        var i;
+        for(i = 0; i < div.length; i++){
+            div[i].onclick = function () {
+                console.log(this.parentNode.parentNode.id);
+                var ul = document.getElementById(this.parentNode.parentNode.id);
+                console.log(ul);
+                var kids = ul.children;
+                console.log(kids[0]);
+                document.getElementById('qb').innerText = kids[0].innerHTML;
+                document.getElementById('pname').value = kids[1].innerHTML;
+                document.getElementById('pprice').value = kids[2].innerHTML;
+                document.getElementById('pquantity').value = kids[3].innerHTML;
+                modifier.style.display = "block";
+            }
+
+        }
+        function edit() {
+            for (var li of document.querySelectorAll('li')){
+                if (document.getElementById('qb').innerText === li.innerText){
+                    var ul = document.getElementById(li.parentNode.id);
+                    ul.children[1].innerHTML = document.getElementById('pname').value;
+                    ul.children[2].innerHTML = document.getElementById('pprice').value;
+                    ul.children[3].innerHTML =  document.getElementById('pquantity').value;
+                    modifier.style.display = "none";
+                }
+            }
+        }
+
+
+    </script>
 </body>
 </html>
