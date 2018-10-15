@@ -282,6 +282,30 @@ span#exit {
     bottom: 5px;
     display: flex;
 }
+/*create attenadant form*/
+.welcome {
+    padding: 15px;
+}
+h2.welcome {
+    padding: 55px 0;
+}
+.box-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form-section {
+    justify-content: center;
+    margin: 0 7px;
+    padding: 12px 0;
+}
+label.holder {
+    float: left;
+    font-size: 15px;
+}
+form.sign {
+    padding: 0 0 50px 0;
+}
 /*media queries*/
 @media(min-width: 768px) {
     .row {
