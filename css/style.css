@@ -306,6 +306,12 @@ label.holder {
 form.sign {
     padding: 0 0 50px 0;
 }
+p#success {
+    padding: 56px 0 18px 0;
+    display: none;
+    font-style: italic;
+    color: #00aeef;
+}
 /*media queries*/
 @media(min-width: 768px) {
     .row {
