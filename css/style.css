@@ -4,6 +4,11 @@
          url("../fonts/proximanova-light[1].woff") format('woff'),
          url("../fonts/proximanova-bold[1].woff") format('woff');
 }
+@font-face {
+    font-family: Subway;
+    src: url("../fonts/Subway.ttf") format('truetype');
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +17,8 @@
 html, body {
     height: 100%;
     background-color: #eaeceb33;
-    text-align: center;
     font: 1.2em/1 "Proxima";
+    text-align: center;
 }
 .wrapper {
     height: 100%;
@@ -119,6 +124,49 @@ div#niv {
     width: 187px;
     text-transform: uppercase;
     font-size: 20px;
+}
+nav.bar {
+    font-size: 23px;
+    background: #00aeef;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 10px;
+}
+a.links {
+    text-decoration: none;
+    color: white;
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.main-nav {
+    list-style: none;
+    display: none;
+}
+a.logo {
+    display: inline-block;
+    margin: 10px 0 0 40px;
+    text-decoration: none;
+    color: white;
+    font-family: subway, sans-serif;
+    font-size: 36px;
+}
+.nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 33px;
+}
+img.mobile {
+    width: 18.2%;
+}
+img.lsize {
+    width: 63%;
+}
+.active{
+    display: block;
 }
 /*side navigation*/
 .navigation {
@@ -312,6 +360,21 @@ p#success {
     font-style: italic;
     color: #00aeef;
 }
+/*View Sale Records*/
+.attendant{
+    display: flex;
+    list-style: none;
+    height: 57px;
+    padding: 17px;
+    background-color: #39dccb;
+    width: 100%;
+    color: white;
+    margin: 12px 0;
+    cursor: pointer;
+}
+.info {
+    display: none;
+}
 /*media queries*/
 @media(min-width: 768px) {
     .row {
@@ -324,4 +387,35 @@ p#success {
     .col-9 {flex: 9}
     .col-10 {flex: 10}
     .col-12 {flex: 12}
+}
+@media screen and (min-width: 768px){
+    .bar{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav{
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .links{
+        margin-left: 40px;
+    }
+    .logo{
+        margin-top: 0;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .logo:hover,
+    .links:hover{
+        color: yellow;
+    }
 }
