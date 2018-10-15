@@ -178,6 +178,32 @@
                 }
             }
         }
+        var del = document.getElementsByClassName('del');
+        var x;
+        for(i = 0; i < del.length; i++){
+            del[i].onclick = function () {
+                if(confirm('Are You Want To Delete?')){
+                    let name = this.parentNode.parentNode.children[1].innerHTML;
+                    this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+                    alert('You have succesfully deleted ' + name);
+                }
+            }
+
+        }
+
+        var span = document.getElementById('exit');
+        span.onclick = function () {
+            modifier.style.display = 'none';
+        };
+        var add = document.getElementById('add');
+        var btn = document.getElementById('add-btn');
+        btn.onclick = function () {
+            add.style.display = 'block';
+        };
+        var span1 = document.getElementById('close');
+        span1.onclick = function () {
+            add.style.display = 'none';
+        };
 
 
     </script>
