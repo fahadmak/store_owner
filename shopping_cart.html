@@ -21,7 +21,10 @@
                     <a href="shopping_cart.html" class="logo font">SM</a>
                     <ul class="main-nav" id="nav-menu">
                         <li ><a class="links" href="#" >POS</a></li>
+                        <li><a class="links" href="viewproducts.html">Products</a></li>
                         <li><a class="links" href="sales.html">Sales</a></li>
+                        <li><a class="links" href="view_all_records.html">Records</a></li>
+                        <li ><a class="links" href="create_attendant.html" >Staff</a></li>
                         <li><a class="links" href="index.html" style="color: red">Logout</a></li>
                     </ul>
                 </nav>
@@ -35,11 +38,20 @@
             <div class="col-12">
                 <div class="center">
 
+
+
                     <!--Shopping Cart-->
 
                     <div class="cart">
                         <h3 style="padding-bottom: 13px;">Shopping Cart</h3>
                         <div class="cart-items" id="shop-cart">
+                            <ul class="product-columns">
+                                <li class="column columnone">ID No.</li>
+                                <li class="column columntwo">Product Name</li>
+                                <li class="column columnthree">Price</li>
+                                <li class="column columnfour">Quantity</li>
+                                <li class="column columnfive">Total</li>
+                            </ul>
                             <div id="empty">There currently no items</div>
                         </div>
                         <p style="padding: 11px;">Total<span id="total" style="padding: 0 0 0 18px;">0</span></p>
